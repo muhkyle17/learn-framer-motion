@@ -48,6 +48,22 @@ function App() {
         whileTap={{ scale: 0.9 }}>
         GESTURE ANIMATIONS
       </motion.button>
+      <div style={{ backgroundColor: 'yellow', padding: '50px', borderRadius: '5px' }}>
+        <motion.div
+          style={{
+            backgroundColor: 'orange',
+            borderRadius: '5px',
+          }}
+          drag
+          dragConstraints={{
+            top: -50,
+            left: -50,
+            right: 50,
+            bottom: 50,
+          }}>
+          DRAG COMPONENT
+        </motion.div>
+      </div>
     </div>
   )
 }
