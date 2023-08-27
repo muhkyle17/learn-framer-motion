@@ -34,8 +34,20 @@ function App() {
         <motion.nav animate={isOpen ? 'open' : 'closed'} variants={variants}>
           VARIANTS
         </motion.nav>
-        <button onClick={() => setIsOpen(isOpen => !isOpen)}>Toggle Click</button>
+        <motion.button
+          style={{ backgroundColor: 'orange' }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsOpen(isOpen => !isOpen)}>
+          Toggle Click
+        </motion.button>
       </div>
+      <motion.button
+        style={{ backgroundColor: 'orange' }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}>
+        GESTURE ANIMATIONS
+      </motion.button>
     </div>
   )
 }
