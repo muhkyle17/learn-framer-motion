@@ -72,6 +72,9 @@ function App() {
           MotionValues
         </motion.div>
       </motion.div>
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+        Scroll-triggered animations
+      </motion.div>
     </div>
   )
 }
