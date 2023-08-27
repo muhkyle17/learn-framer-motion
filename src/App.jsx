@@ -14,25 +14,28 @@ function App() {
   return (
     <div className='division'>
       <motion.div
+        style={{ backgroundColor: 'green' }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 5 }}
         transition={{ duration: 2 }}>
-        <p>HELLO</p>
+        ANIMATION
       </motion.div>
       <motion.div
         transition={{ duration: 2 }}
-        style={{ backgroundColor: 'orange', width: '50%' }}
+        style={{ backgroundColor: 'orange', padding: '10px' }}
         animate={{
           scale: [1, 2.2, 2.2, 1, 1],
           rotate: [0, 0, 270, 270, 0],
-          borderRadius: ['20%', '20%', '50%', '50%', '20%'],
+          borderRadius: ['5px', '20%', '50%', '50%', '5px'],
         }}>
-        <p>HI</p>
+        KEYFRAMES
       </motion.div>
-      <motion.nav animate={isOpen ? 'open' : 'closed'} variants={variants}>
-        APPEAR DISAPPEAR
-      </motion.nav>
-      <button onClick={() => setIsOpen(isOpen => !isOpen)}>Toggle Click</button>
+      <div>
+        <motion.nav animate={isOpen ? 'open' : 'closed'} variants={variants}>
+          VARIANTS
+        </motion.nav>
+        <button onClick={() => setIsOpen(isOpen => !isOpen)}>Toggle Click</button>
+      </div>
     </div>
   )
 }
